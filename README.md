@@ -4,7 +4,7 @@
 
 API documentation of service of TogetherBus.
 
-### Documentation
+## Documentation
 
 Documentation of methods provided by TogetherBus Service is available at `./service/`
 
