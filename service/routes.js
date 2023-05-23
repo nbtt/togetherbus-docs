@@ -6,7 +6,7 @@ const routes = function(mock) {
             routes: [
                 {
                     "busNo": "08", // bus route number
-                    "operatingTime": "10:20 - 20:30", // format: "hh:mm - hh:mm"
+                    "operatingTime": "10:20 - 20:30", // operating time, format: "hh:mm - hh:mm"
                     "price": "10000", // 10 000 VND
                     "name": "Bến Xe Buýt Quận 8- Đại học Quốc Gia" // display route name
                 },
