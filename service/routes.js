@@ -30,7 +30,27 @@ const routes = function(mock) {
             "name": "Bến Xe Buýt Quận 8- Đại học Quốc Gia",
             "type": "Phổ thông - Có trợ giá"
         })
-        
+        .get('/routes/08/stops') // get all stops of route 08
+        .any()
+        .reply(200, {
+            stops: [
+                {
+                    "name": "Bến Xe Buýt Quận 8", // stop name
+                    "address": "Số 1, Đường Tạ Quang Bửu, Phường 6, Quận 8, TP.HCM", // stop address
+                    "lat": "10.7403", // The latitude of this stop
+                    "lng": "106.663", // The longitude of this stop
+                    "order": 0 // The order of this stop in route
+                },
+                { //next stop
+                    "name": "Đại học Quốc Gia", 
+                    "address": "Số 1, Đường Đại Học Quốc Gia, Phường Linh Trung, Quận Thủ Đức, TP.HCM",
+                    "lat": "10.8703",
+                    "lng": "106.803",
+                    "order": 1
+                }
+            ],
+            total: 2,
+        })
 }
 
 module.exports = routes;
