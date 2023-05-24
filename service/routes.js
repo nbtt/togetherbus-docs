@@ -78,17 +78,29 @@ const routes = function(mock) {
         .get('/routes/08/timetables') // get all timetables of route 08
         .any()
         .reply(200, {// goTimes: go times of route 08
-            "goTimes": [
+            "goTimetables": [
                 {
-                    "start": "04:40", // start time
-                    "end": "20:30", // end time
+                    "order": 0, // The order of this timetable in route
+                    "startTime": "04:40", // start time
+                    "endTime": "20:30", // end time
                 },
+                {
+                    "order": 1, // The order of this timetable in route
+                    "startTime": "04:40", // start time
+                    "endTime": "20:30", // end time
+                }
             ],
             // returnTimes: return times of route 08
-            "returnTimes": [
+            "returnTimetables": [
                 {
-                    "start": "04:40", // start time
-                    "end": "20:30", // end time
+                    "order": 0, // The order of this timetable in route
+                    "startTime": "04:40", // start time
+                    "endTime": "20:30", // end time
+                },
+                {
+                    "order": 1, // The order of this timetable in route
+                    "startTime": "04:40", // start time
+                    "endTime": "20:30", // end time
                 }
             ]
         })
