@@ -33,7 +33,7 @@ const routes = function(mock) {
         .get('/routes/08/stops') // get all stops of route 08
         .any()
         .reply(200, 
-            [[
+            {'goStops':[
                 {
                     "code": "Q8", // stop code
                     "lat": "10.7403", // The latitude of this stop
@@ -54,7 +54,7 @@ const routes = function(mock) {
 
                 }
             ],
-            [ // return route
+            'returnStops': [ // return stops of route 08
                 {
                     "name": "Đai học Quốc Gia",
                     "code": "DHQG",
@@ -73,7 +73,7 @@ const routes = function(mock) {
                     "order": 1,
                     "address": "Số 1, Đường Tạ Quang Bửu, Phường 6, Quận 8, TP.HCM",
                 }
-            ]]
+            ]}
         )
 }
 
