@@ -27,7 +27,7 @@ const orders = function(mock) {
                 "accountPhone": "000000000"
             }]  
         )
-        .post('/orders',{
+        .post('/orders/creat',{
             accountId : "000000000", // it is account phone
             items: [
                 {
