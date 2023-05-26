@@ -27,21 +27,22 @@ const orders = function(mock) {
                 "accountPhone": "000000000"
             }]  
         )
-        .post('/orders')
-        .body({
-            "accountId": "000000000", // it is account phone
-            "items": [
+        .post('/orders',{
+            accountId : "000000000", // it is account phone
+            items: [
                 {
-                    "routeBusNo": "01",  // route bus string
-                    "amount": "100000", // total amount string bigint
-                    "discount": "0", // discount string bigint
-                    "quantity": 1, // quantity number integer
+                    route: "01",  // route bus string
+                    amount: "100000", // total amount string bigint
+                    discount: "0", // discount string bigint
+                    quantity: 1, // quantity number integer
                 }
             ]
         })
+        .any()
         .reply(201, {
-            status: 'OK'
+            status: 'OK',
+            ordersId: '12'
         });
 }
 
-module.exports = ping;
+module.exports = orders;
